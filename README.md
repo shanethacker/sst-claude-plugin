@@ -1,4 +1,4 @@
-# sst — Shane Thacker's Claude Code Plugin
+# sst — Shane's Claude Code Plugin
 
 Personal Claude Code toolkit providing generalized development workflow skills and agents.
 
