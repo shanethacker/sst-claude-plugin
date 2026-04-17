@@ -1,6 +1,6 @@
 # sst Plugin
 
-Shane Thacker's personal Claude Code toolkit. Namespace: `sst`.
+Personal Claude Code toolkit. Namespace: `sst`.
 
 ## What's in This Plugin
 
@@ -16,7 +16,7 @@ Shane Thacker's personal Claude Code toolkit. Namespace: `sst`.
 ## Design Principles
 
 **Generalized, not generic.** Skills in this plugin were developed against a specific
-Django/Python project (HERO) and then generalized. They discover project conventions
+Django/Python project and then generalized. They discover project conventions
 at runtime rather than assuming a particular stack. Project-specific overrides belong
 in the project's own `.claude/` directory.
 
