@@ -1,34 +1,34 @@
 ---
 name: security-reviewer
-description: Use this agent when code changes need a security review — before opening a PR on security-sensitive changes, after implementing authentication or authorization features, when adding external API integrations, or when handling user input, file uploads, or sensitive data. Examples:
+description: |
+  Use this agent when code changes need a security review — before opening a PR on security-sensitive changes, after implementing authentication or authorization features, when adding external API integrations, or when handling user input, file uploads, or sensitive data. Examples:
 
-<example>
-Context: The user has implemented a new authentication flow and wants it reviewed for security issues.
-user: "I've added the new OAuth callback handler. Can you security review it?"
-assistant: "I'll use the security-reviewer agent to review the authentication implementation."
-<commentary>
-Authentication flows are high-risk and should always get a security review before merging.
-</commentary>
-</example>
+  <example>
+  Context: The user has implemented a new authentication flow and wants it reviewed for security issues.
+  user: "I've added the new OAuth callback handler. Can you security review it?"
+  assistant: "I'll use the security-reviewer agent to review the authentication implementation."
+  <commentary>
+  Authentication flows are high-risk and should always get a security review before merging.
+  </commentary>
+  </example>
 
-<example>
-Context: The user is about to open a PR that touches file upload handling.
-user: "The file upload endpoint is done. Review it before I push."
-assistant: "Let me have the security-reviewer agent look at the file handling code."
-<commentary>
-File upload endpoints are a common vector for path traversal, unrestricted file types, and storage misconfigurations.
-</commentary>
-</example>
+  <example>
+  Context: The user is about to open a PR that touches file upload handling.
+  user: "The file upload endpoint is done. Review it before I push."
+  assistant: "Let me have the security-reviewer agent look at the file handling code."
+  <commentary>
+  File upload endpoints are a common vector for path traversal, unrestricted file types, and storage misconfigurations.
+  </commentary>
+  </example>
 
-<example>
-Context: The user has added an integration with an external API that accepts user-provided URLs.
-user: "I've finished the webhook integration. Does it look safe?"
-assistant: "I'll use the security-reviewer agent to check for SSRF and related issues."
-<commentary>
-External integrations that accept user-controlled input are SSRF candidates and need security review.
-</commentary>
-</example>
-
+  <example>
+  Context: The user has added an integration with an external API that accepts user-provided URLs.
+  user: "I've finished the webhook integration. Does it look safe?"
+  assistant: "I'll use the security-reviewer agent to check for SSRF and related issues."
+  <commentary>
+  External integrations that accept user-controlled input are SSRF candidates and need security review.
+  </commentary>
+  </example>
 model: inherit
 color: red
 tools: ["Read", "Grep", "Glob", "Bash"]

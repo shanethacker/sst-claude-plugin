@@ -1,34 +1,34 @@
 ---
 name: code-reviewer
-description: Use this agent when a meaningful chunk of code has been written or modified and needs review for quality, conventions, and correctness — especially after completing a feature, fixing a bug, or finishing a logical implementation step. Examples:
+description: |
+  Use this agent when a meaningful chunk of code has been written or modified and needs review for quality, conventions, and correctness — especially after completing a feature, fixing a bug, or finishing a logical implementation step. Examples:
 
-<example>
-Context: The user has just implemented a new API endpoint and wants it reviewed before opening a PR.
-user: "I've finished the new search endpoint. Can you review it?"
-assistant: "I'll use the code-reviewer agent to review the implementation."
-<commentary>
-A completed feature implementation is the ideal trigger — the agent reviews conventions, cross-module impact, test coverage, and performance patterns.
-</commentary>
-</example>
+  <example>
+  Context: The user has just implemented a new API endpoint and wants it reviewed before opening a PR.
+  user: "I've finished the new search endpoint. Can you review it?"
+  assistant: "I'll use the code-reviewer agent to review the implementation."
+  <commentary>
+  A completed feature implementation is the ideal trigger — the agent reviews conventions, cross-module impact, test coverage, and performance patterns.
+  </commentary>
+  </example>
 
-<example>
-Context: The user has refactored a service layer and wants a second opinion.
-user: "I've refactored the import service. Take a look and tell me if I missed anything."
-assistant: "Let me have the code-reviewer agent examine the refactor."
-<commentary>
-Refactors need careful review for behavioral changes and missing test coverage — this agent is well-suited for it.
-</commentary>
-</example>
+  <example>
+  Context: The user has refactored a service layer and wants a second opinion.
+  user: "I've refactored the import service. Take a look and tell me if I missed anything."
+  assistant: "Let me have the code-reviewer agent examine the refactor."
+  <commentary>
+  Refactors need careful review for behavioral changes and missing test coverage — this agent is well-suited for it.
+  </commentary>
+  </example>
 
-<example>
-Context: The user has just completed a step from a larger plan.
-user: "Step 2 from our plan is done — the data pipeline processors are implemented."
-assistant: "Great. I'll use the code-reviewer agent to review this step against the plan."
-<commentary>
-Completing a numbered step from a plan is a natural code review trigger point.
-</commentary>
-</example>
-
+  <example>
+  Context: The user has just completed a step from a larger plan.
+  user: "Step 2 from our plan is done — the data pipeline processors are implemented."
+  assistant: "Great. I'll use the code-reviewer agent to review this step against the plan."
+  <commentary>
+  Completing a numbered step from a plan is a natural code review trigger point.
+  </commentary>
+  </example>
 model: inherit
 color: blue
 tools: ["Read", "Write", "Grep", "Glob", "Bash"]
