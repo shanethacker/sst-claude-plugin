@@ -27,8 +27,24 @@ Personal Claude Code toolkit providing generalized development workflow skills a
 
 ## Installation
 
-```bash
-claude plugin install https://github.com/shanethacker/sst-claude-plugin
+**Step 1 — Add the marketplace**
+
+```
+/plugin marketplace add shanethacker/sst-claude-plugin
+```
+
+This registers the catalog with Claude Code. No plugins are installed yet.
+
+**Step 2 — Install the plugin**
+
+```
+/plugin install sst@sst-claude-marketplace
+```
+
+**Step 3 — Activate**
+
+```
+/reload-plugins
 ```
 
 ## License
