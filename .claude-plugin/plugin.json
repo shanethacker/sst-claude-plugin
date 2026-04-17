@@ -1,7 +1,7 @@
 {
   "name": "sst",
   "version": "0.1.0",
-  "description": "Shane Thacker's personal Claude Code toolkit — generalized skills and agents for software development workflows.",
+  "description": "Personal Claude Code toolkit — generalized skills and agents for software development workflows.",
   "author": {
     "name": "Shane Thacker",
     "url": "https://github.com/shanethacker"
@@ -9,5 +9,12 @@
   "homepage": "https://github.com/shanethacker/sst-claude-plugin",
   "repository": "https://github.com/shanethacker/sst-claude-plugin",
   "license": "MIT",
-  "keywords": ["productivity", "code-review", "testing", "devops", "django", "python"]
+  "keywords": [
+    "productivity",
+    "code-review",
+    "testing",
+    "devops",
+    "django",
+    "python"
+  ]
 }

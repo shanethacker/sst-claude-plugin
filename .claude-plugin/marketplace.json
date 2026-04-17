@@ -1,0 +1,22 @@
+{
+  "name": "sst-claude-marketplace",
+  "owner": {
+    "name": "Shane Thacker"
+  },
+  "metadata": {
+    "description": "Shane's Claude Code toolkit — generalized skills and agents for software development workflows."
+  },
+  "plugins": [
+    {
+      "name": "sst",
+      "description": "Personal Claude Code toolkit — generalized skills and agents for software development workflows.",
+      "version": "0.1.0",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/shanethacker/sst-claude-plugin",
+      "author": {
+        "name": "Shane Thacker"
+      }
+    }
+  ]
+}
