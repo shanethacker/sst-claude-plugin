@@ -10,6 +10,8 @@ Personal Claude Code toolkit. Namespace: `sst`.
 | `sst:pr-check` | Skill | Runs quality gates (lint, format, type check, tests) before a PR |
 | `sst:gen-test` | Skill | Generates tests following the project's established conventions |
 | `sst:update-runbooks` | Skill | Audits operational runbooks for drift against the current codebase |
+| `sst:explain-code` | Skill | Explains code with analogies, ASCII diagrams, and step-by-step walkthroughs |
+| `sst:explain-pr` | Skill | Produces a narrative document explaining all changes in a PR or branch |
 | `code-reviewer` | Agent | Reviews code changes for correctness, conventions, and coverage |
 | `security-reviewer` | Agent | Reviews code changes for security vulnerabilities |
 
@@ -22,7 +24,7 @@ in the project's own `.claude/` directory.
 
 **Procedural skills use `disable-model-invocation: true`.** The skills that orchestrate
 workflows (`review-dependabot-prs`, `pr-check`, `update-runbooks`) set this flag;
-`gen-test` does not because it writes output directly.
+`gen-test`, `explain-code`, and `explain-pr` do not because they write output directly.
 
 ## Adding New Components
 

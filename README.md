@@ -12,6 +12,8 @@ Personal Claude Code toolkit providing generalized development workflow skills a
 | `sst:pr-check` | `/sst:pr-check` | Runs the project's quality gates (lint, format, type check, tests) locally before opening a PR. Detects tooling automatically. |
 | `sst:gen-test` | `/sst:gen-test` | Generates tests that match the project's established conventions. Reads existing tests before writing new ones. |
 | `sst:update-runbooks` | `/sst:update-runbooks` | Audits operational runbooks against the current codebase and updates anything that has drifted. |
+| `sst:explain-code` | `/sst:explain-code` | Explains code using analogies, ASCII diagrams, and step-by-step walkthroughs. Use when teaching or exploring a codebase. |
+| `sst:explain-pr` | `/sst:explain-pr` | Produces a narrative markdown document explaining all changes in a PR or branch — what changed, why, and how the pieces fit together. |
 
 ### Agents
 
