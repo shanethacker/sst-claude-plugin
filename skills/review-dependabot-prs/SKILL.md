@@ -27,7 +27,7 @@ Analyze Dependabot PRs and produce an evidence-based recommendation report. Do N
 gh pr list --author "app/dependabot" --state open --json number,title,headBranch,labels,createdAt,url
 
 # Or fetch specific PRs
-gh pr view <number> --json number,title,headBranch,labels,createdAt,url,body,statusCheckRollup
+gh pr view <number> --json number,title,headRefName,labels,createdAt,url,body,statusCheckRollup
 ```
 
 If no open Dependabot PRs exist, report that and stop.
