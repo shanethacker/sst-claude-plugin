@@ -12,8 +12,10 @@ Personal Claude Code toolkit. Namespace: `sst`.
 | `sst:update-runbooks` | Skill | Audits operational runbooks for drift against the current codebase |
 | `sst:explain-code` | Skill | Explains code with analogies, ASCII diagrams, and step-by-step walkthroughs |
 | `sst:explain-pr` | Skill | Produces a narrative document explaining all changes in a PR or branch |
+| `sst:make-presentation` | Skill | Builds research-backed technical presentation content (markdown, optional PPTX) |
 | `code-reviewer` | Agent | Reviews code changes for correctness, conventions, and coverage |
 | `security-reviewer` | Agent | Reviews code changes for security vulnerabilities |
+| `presentation-reviewer` | Agent | Reviews presentation drafts for structure, clarity, and accessibility |
 
 ## Design Principles
 
@@ -23,8 +25,9 @@ at runtime rather than assuming a particular stack. Project-specific overrides b
 in the project's own `.claude/` directory.
 
 **Procedural skills use `disable-model-invocation: true`.** The skills that orchestrate
-workflows (`review-dependabot-prs`, `pr-check`, `update-runbooks`) set this flag;
-`gen-test`, `explain-code`, and `explain-pr` do not because they write output directly.
+workflows (`review-dependabot-prs`, `pr-check`, `update-runbooks`, `make-presentation`) set
+this flag; `gen-test`, `explain-code`, and `explain-pr` do not because they write output
+directly.
 
 ## Adding New Components
 
@@ -38,3 +41,7 @@ When generalizing a project-specific skill:
 ## Prerequisites
 
 - [`gh`](https://cli.github.com/) — required by `review-dependabot-prs`, `pr-check`, and `update-runbooks`
+- `deep-research` — used by `make-presentation`'s research phase. It's a bundled Claude Code
+  workflow (not a plugin), so it ships by default and needs no separate install. Falls back to
+  scoped web search per claim if bundled skills/workflows are disabled (`disableBundledSkills`).
+- [`pandoc`](https://pandoc.org/) — optional, only for `make-presentation`'s PowerPoint export

@@ -10,7 +10,7 @@
     {
       "name": "sst",
       "description": "Personal Claude Code toolkit — generalized skills and agents for software development workflows.",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/shanethacker/sst-claude-plugin",
