@@ -44,12 +44,9 @@ Read the full draft file. If it has `created_by: sst:make-presentation` frontmat
 `audience` and `duration_minutes` fields — your critique should be calibrated to the stated
 audience and length, not a generic bar.
 
-**Out of scope: fact-checking.** Presentation content produced by `make-presentation` is
-researched and cited by the `deep-research` skill before you see it. Don't re-verify claims,
-re-check whether a citation is current, or flag "is this still true" — that verification
-already happened upstream. If a slide asserts something with no citation and it reads like a
-claim that should have one, flag that as a structural gap (missing evidence), not a factual
-concern.
+**Out of scope: fact-checking.** Focus on structure and clarity; do not re-verify factual claims or re-check whether citations are current.
+
+If the draft has `created_by: sst:make-presentation`, its citations should already have been gathered via the bundled `deep-research` workflow before you see it. If a slide asserts something with no citation and it reads like a claim that should have one, flag that as a structural gap (missing evidence), not a factual concern.
 
 ## What to Review
 
