@@ -21,13 +21,15 @@ reviewed by a fresh pair of eyes, and refined iteratively across sessions.
 ## Arguments
 
 - No args: start a new presentation, or continue one if you point at its file when asked
-- A file path: treat as an existing presentation produced by this skill — jump to Phase 5 (Refine)
+- A file path:
+  - If the file has `created_by: sst:make-presentation` in frontmatter, treat it as a continuation — jump to Phase 5 (Refine)
+  - Otherwise, ask whether the file should be used as an **input outline** (read it as Phase 1 Q4) or as the **output destination** for a new deck
 
 ## Phase 0 — Detect new vs. continuing
 
-If given a file path argument, read it. If its frontmatter has `created_by: sst:make-presentation`,
-this is a continuation — skip Phase 1 (its answers are already in the frontmatter) and go to
-Phase 5.
+If given a file path argument, read it.
+- If its frontmatter has `created_by: sst:make-presentation`, this is a continuation — skip Phase 1 (its answers are already in the frontmatter) and go to Phase 5.
+- Otherwise, ask whether to treat it as an outline input or as the output destination, then proceed to Phase 1 with that choice applied.
 
 If no argument, ask: "New presentation, or continuing one you already started?" If continuing,
 ask for the file path, then proceed as above. Otherwise proceed to Phase 1.
